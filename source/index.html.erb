@@ -14,201 +14,131 @@ title: Le Wagon Middleman boilerplate
 
 
 
-      <!-- Your banner code -->
-
-      <%= partial "banner", locals: { banner_image: "images/background.jpg", header: "Hello world", banner_text: "Very cool stuff, useful and smart" } %>
+<!-- Your banner code -->
 
 
 
 
-<!-- image_path "logo.png" /images/logo.png
-image_url "logo.png" http://wwww.mydomain.org/images/logo.png
-image_tag "logo.png" <img src="/images/logo.png" alt="mylogo"> -->
+<!-- Your map code -->
+<div id="map" style="width: 100%; height: 400px;"></div>
 
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
+<script type="text/javascript">
+  var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
 
-
-
-
-
-        <!-- Your features code -->
-
-        <!-- Your cards code -->
-        <!--   Autre container -->
-        <div class="wrapper">
-          <div class="container padded">
-            <h3 class=text-center>You next trip</h3>
-            <div class="row">
-              <div class= "col-sm-4">
-                <div class= "card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-                  <a class="card-link" href="#"></a>
-                  <div class="card-city">Paris</div>
-                  <div class="card-description">City of love</div>
-                  <div>
-                    <img src="images/anne.jpg" alt="Anne" class="img-circle avatar">
-                  </div>
-                </div>
-              </div>
-              <div class= "col-sm-4">
-                <div class= "card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-                  <a class="card-link" href="#"></a>
-                  <div class="card-city">Paris</div>
-                  <div class="card-description">City of love</div>
-                  <div>
-                    <img src="images/anne.jpg" alt="Anne" class="img-circle avatar">
-                  </div>
-                </div>
-              </div>
-              <div class= "col-sm-4">
-                <div class= "card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-                  <a class="card-link" href="#"></a>
-                  <div class="card-city">Paris</div>
-                  <div class="card-description">City of love</div>
-                  <div>
-                    <img src="images/anne.jpg" alt="Anne" class="img-circle avatar">
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Your newsletter code -->
-  <div class="row text-center padded" id="newsletter">
-    <h2>Get news from us</h2>
-    <p>Leave us your mail and get news from us</p>
-    <form class="form-inline">
-      <input type="text" class="input-small form-control" placeholder="Email">
-      <button type="submit" class="btn btn-primary">Suscribe</button>
-    </form>
-
-  </div>
-
-  <!-- Your map code -->
-  <div id="map" style="width: 100%; height: 400px;"></div>
-
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-  <script type="text/javascript">
-    var myLatlng = new google.maps.LatLng(48.8655909, 2.378983);
-
-    var myOptions = {
-      zoom: 16,
-      center: myLatlng,
-      scrollwheel: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [
+  var myOptions = {
+    zoom: 16,
+    center: myLatlng,
+    scrollwheel: false,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    styles: [
+    {
+      "featureType": "all",
+      "elementType": "all",
+      "stylers": [
       {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "on"
-        },
-        {
-          "hue": "#ff0000"
-        },
-        {
-          "saturation": "0"
-        },
-        {
-          "lightness": "0"
-        }
-        ]
+        "visibility": "on"
       },
       {
-        "featureType": "administrative",
-        "elementType": "labels.text.fill",
-        "stylers": [
-        {
-          "color": "#444444"
-        }
-        ]
+        "hue": "#ff0000"
       },
       {
-        "featureType": "landscape",
-        "elementType": "all",
-        "stylers": [
-        {
-          "color": "#f2f2f2"
-        }
-        ]
+        "saturation": "0"
       },
       {
-        "featureType": "poi",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
-      },
-      {
-        "featureType": "road",
-        "elementType": "all",
-        "stylers": [
-        {
-          "saturation": -100
-        },
-        {
-          "lightness": 45
-        }
-        ]
-      },
-      {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "simplified"
-        }
-        ]
-      },
-      {
-        "featureType": "road.arterial",
-        "elementType": "labels.icon",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
-      },
-      {
-        "featureType": "transit",
-        "elementType": "all",
-        "stylers": [
-        {
-          "visibility": "off"
-        }
-        ]
-      },
-      {
-        "featureType": "water",
-        "elementType": "all",
-        "stylers": [
-        {
-          "color": "#a51e23"
-        },
-        {
-          "saturation": "-1"
-        },
-        {
-          "lightness": "48"
-        },
-        {
-          "gamma": "1.88"
-        },
-        {
-          "weight": "1.88"
-        }
-        ]
+        "lightness": "0"
       }
       ]
+    },
+    {
+      "featureType": "administrative",
+      "elementType": "labels.text.fill",
+      "stylers": [
+      {
+        "color": "#444444"
+      }
+      ]
+    },
+    {
+      "featureType": "landscape",
+      "elementType": "all",
+      "stylers": [
+      {
+        "color": "#f2f2f2"
+      }
+      ]
+    },
+    {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "off"
+      }
+      ]
+    },
+    {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+      {
+        "saturation": -100
+      },
+      {
+        "lightness": 45
+      }
+      ]
+    },
+    {
+      "featureType": "road.highway",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "simplified"
+      }
+      ]
+    },
+    {
+      "featureType": "road.arterial",
+      "elementType": "labels.icon",
+      "stylers": [
+      {
+        "visibility": "off"
+      }
+      ]
+    },
+    {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+      {
+        "visibility": "off"
+      }
+      ]
+    },
+    {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+      {
+        "color": "#a51e23"
+      },
+      {
+        "saturation": "-1"
+      },
+      {
+        "lightness": "48"
+      },
+      {
+        "gamma": "1.88"
+      },
+      {
+        "weight": "1.88"
+      }
+      ]
+    }
+    ]
 
 
  // TODO: replace [] by array from https://snazzymaps.com/
@@ -222,16 +152,6 @@ var marker = new google.maps.Marker({
 });
 </script>
 
-<!-- Your footer code -->
-
-<!-- <div class="footer">
-  <ul class="list-inline">
-    <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-  </ul>
-  <p>This is a Airbnb Home challenge @ LeWagon</p>
 
 </div> -->
 

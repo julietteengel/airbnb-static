@@ -12,7 +12,7 @@
   height:250px;
   background-size: cover;
   border-radius: 8px;
-  color:#A7A8B6;
+  color: $gray;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -37,12 +37,11 @@
   top:0px;
   opacity: 0.3;
   transition: color 0,5s ease;
-}
 
-
-
-.card-link a:hover{
-  color: #FFFF00;
+  a:hover{
+  color: $yellow;
        opacity: 0;
 }
+}
+
 

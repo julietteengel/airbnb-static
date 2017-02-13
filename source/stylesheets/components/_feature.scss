@@ -20,7 +20,7 @@ h2 {
   padding: 100px 0;
 }
 .wrapper-grey {
-  background: #CDCCDC;
+  background: $gray;
 }
 
 .explanation-icon img{
@@ -28,11 +28,11 @@ h2 {
 }
 
 .wrapper {
-  background-color: #B2B1BC;
+  background-color: $gray;
 }
 
 .card-grey {
-  background-color: #F5F5F5;
+  background-color: $gray;
   border-radius: 5px;
   padding:10px 20px;
 }

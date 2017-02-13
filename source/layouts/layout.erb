@@ -27,9 +27,14 @@
     <body class="<%= page_classes %>">
 
       <%= partial "navbar" %>
+      <%= partial "banner", locals: { banner_image: "images/background.jpg", header: "Hello world", banner_text: "Very cool stuff, useful and smart" } %>
+
       <!--     <!call _navbar.html.erb partial  -->
-      <%= yield %>
       <!--     Page content is injected here  -->
+      <%= partial "feature" %>
+      <%= partial "cards" %>
+      <%= partial "newsletter" %>
+<%= yield %>
       <%= partial "footer" %>
       <!-- call _footer.html.erb partial -->
 

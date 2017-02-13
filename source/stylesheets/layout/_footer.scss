@@ -1,0 +1,24 @@
+
+/* Footer design */
+.footer {
+  width:100vw;
+  height:150px;
+  color:#BCB6CF;
+  background-color: #464550;
+  padding: 30px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+}
+
+.list-inline {
+  padding:10px;
+}
+
+.footer a {
+  transition: color 0,5s ease;
+  letter-spacing: 20px;
+}
+
+.footer .fa:hover{
+  color:#3C3F86;
+}

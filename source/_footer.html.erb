@@ -1,0 +1,15 @@
+
+<div id="footer">
+  <ul class="list-inline">
+
+    <% %w(instagram twitter facebook).each do |channel| %>
+      <% link_to "#" do %>
+        <i class="fa fa-<%= channel %>" aria-hidden="true"></i>
+      <% end %>
+    <% end %>
+
+
+  </ul>
+  <p>This is a Airbnb Home challenge @ LeWagon</p>
+
+</div>
